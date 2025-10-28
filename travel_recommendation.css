@@ -345,69 +345,172 @@ aside ul {
     transform: scale(1.1);
 }
 
+/* ==================================
+Enhanced Responsive Design
+================================== */
 
-/* Optional: Add a simple media query for smaller screens */
+/* --- Tablets and smaller laptops (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  #main1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 45%;
+    height: auto;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  #results, #get-input {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .team {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
+/* --- Tablets / medium screens (max-width: 768px) --- */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-bottom: 10px;
-        position: static; /* Remove fixed position on mobile */
-    }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    position: static;
+  }
 
-    body {
-        padding-top: 0;
-        padding-left: 0px;
-    }
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
-        width: 100%;
-        margin: 10px 0;
-    }
-    
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-    
-    nav ul li a {
-        display: block;
-        padding: 8px 0;
-    }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
 
-    nav > div:last-child {
-        width: 100%;
-        justify-content: space-between;
-    }
+  #search {
+    width: 100%;
+  }
 
-    #search {
-        flex-grow: 1;
-        width: auto;
-    }
+  #main1 {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    aside {
-        position: static;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-        padding: 0px ;
-        border-radius: 0;
-        box-shadow: none;
-        background-color: transparent;
-    }
-    
-    aside ul {
-        flex-direction: row;
-    }
+  .card {
+    width: 90%;
+    height: auto;
+  }
 
-    #main {
-        padding-top: 40px;
-    }
-    h1 {
-        font-size: 4em;
-    }
+  #main, #results {
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-left: 0;
+    margin-top: 10vh;
+  }
+
+  #get-input {
+    width: 90%;
+  }
+
+  aside {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  aside ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* --- Small mobile devices (max-width: 480px) --- */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  nav > div:first-child span {
+    font-size: 1.2em;
+  }
+
+  #logo {
+    height: 30px;
+  }
+
+  #search {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+  nav button {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .card h3 {
+    font-size: 1.1em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+
+  #get-input {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 90%;
+    height: auto;
+  }
 }
