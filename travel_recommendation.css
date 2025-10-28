@@ -1,0 +1,413 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes padding and border included in the element's total width and height */
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: rgba(255, 255, 255, 0.863); /* A vibrant blue for links and buttons */
+    --secondary-color: #1b7ceb; /* A complementary green */
+    --text-color: #fdfdfd;
+    --nav-bg: #01165aab;
+    --border-color: #fff5f5;
+    --box-bg: #0057b31f;
+}
+
+body {
+    background-image: url('Images/back-ground-image.jpg');
+    background-size: cover;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 100px;
+    padding-left: 20px; /* Space for the fixed navigation bar */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* ==================================
+Navigation Bar Styles 
+==================================
+*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--text-color);
+    position: fixed; /* Keeps the navigation bar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the nav is above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Title Section */
+nav > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo {
+    height: 40px;
+    width: auto;
+}
+
+nav > div:first-child span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 550;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color:rgb(179, 200, 228);
+    text-decoration: underline;
+}
+
+/* Search and Buttons Section */
+nav > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#search {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+#search:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+nav button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav button[type="search"] {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+nav button[type="clear"] {
+    background-color: #5684acb4; /* A neutral gray */
+    color: white;
+}
+
+nav button:hover {
+    background-color: rgb(243, 247, 246);
+    color: #110101;
+}
+
+/* ==================================
+Main Content / Hero Section Styles 
+==================================
+*/
+.card {
+    width: 500px;
+    height: 580px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.card img {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px 10px 0px 0px;
+    background-position: cover;
+}
+.card h3 {
+    padding: 10px;
+    font-weight: bolder;
+    color: #161515;
+}
+.card p {
+    font-weight: normal;
+    color:gray;
+    padding: 10px;
+}
+#main1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2%;
+}
+#main{
+    max-width: 1200px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+}
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    width: 600px;
+}
+
+.about-section {
+    color:var(--primary-color);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 10%;
+}
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-top: 20vh;
+
+}
+h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color:rgba(2, 2, 80, 0.87);
+}
+#get-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: var(--box-bg);
+    border: 2px solid  #0057b33a;
+    padding: 10px;
+    width: 600px;
+}
+input, textarea{
+    background-color: transparent;
+    border: 2px solid  #021f3f52;
+    border-radius: 5px;
+}
+input {
+    height: 30px;
+}
+#messege-button, .card .visit-btn {
+    margin-top: 4px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 6px;
+    border-radius: 5px;
+}
+#messege-button:hover {
+    background-color:White;
+    color: Black;
+    cursor: pointer;
+}
+.card .visit-btn {
+    margin-left:10px;
+    margin-right: 50%;
+}
+.card .visit-btn:hover {
+    background-color: #443e3e;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+#contact_para {
+    padding-left: 20px;
+}
+#summary, #about_para, #contact_para{
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 550;
+    margin-bottom: 40px;
+    color: #363535;
+
+}
+#about_para, .team{
+    max-width: 1400px;
+}
+#summary, #about_para{
+    border-radius: 0 20px 20px 0;
+    background-color: var(--box-bg);
+    border: 2px solid  #0057b33a;
+    padding: 10px;
+    border-left: 4px solid  #003a77;
+}
+#contact_para:hover{
+    color:#0057b3;
+    text-decoration: underline;
+}
+#summary{
+    max-width: 1000px;
+}
+.team {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+.team_heading{
+    max-width: 300px;
+    line-height: 3cm;
+}
+
+.member {
+  border-radius: 10px;
+  background-color: var(--box-bg);
+  border: 2px solid  #0057b33a;
+  box-shadow: 0 4px 8px rgba(73, 62, 62, 0.575);
+  padding: 20px 30px;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  color: #fdfdfd;
+  font-weight: bold;
+}
+.member:hover {
+    opacity: 2;
+    transform: scale(1.1);
+}
+
+.member h3, label {
+  color: rgba(2, 2, 80, 0.87);
+  margin-bottom: 6px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+/* ==================================
+Social Media Aside Styles 
+==================================
+*/
+aside {
+    position: fixed;
+    top: 30%; /* Center vertically in relation to the #main content */
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.356);
+    padding: 10px 5px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.icons {
+    width: 40px; /* Standard size for social media icons */
+    height: 40px;
+    opacity: 2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.icons:hover {
+    opacity: 4;
+    transform: scale(1.1);
+}
+
+
+/* Optional: Add a simple media query for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+        position: static; /* Remove fixed position on mobile */
+    }
+
+    body {
+        padding-top: 0;
+        padding-left: 0px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    nav > div:last-child {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #search {
+        flex-grow: 1;
+        width: auto;
+    }
+
+    aside {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        padding: 0px ;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    
+    aside ul {
+        flex-direction: row;
+    }
+
+    #main {
+        padding-top: 40px;
+    }
+    h1 {
+        font-size: 4em;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWise | Home</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="Images\travelWise.png" alt="logo" id="logo" >
+            <span>Home | TravelWise</span>
+        </div>
+        <ul>
+            <li><a href="index.html" target="_blank">Home</a></li>
+            <li><a href="about_us.html" target="_blank">About us</a></li>
+            <li><a href="contact_us.html" target="_blank">Contact Us</a></li>
+        </ul>
+        <div>
+                <input type="search" name="search" id="search" placeholder="Enter a destination or keyword">
+                <img src="" alt="">
+                <button type="search" onclick="searchRecommendations()">Search</button>
+                <button type="clear" onclick="clearResults()">Clear</button>
+            </div>
+    </nav>
+    <div id="main1">
+        <div id="main">
+            <h1>TravelWise: Your World, Your Way</h1>
+            <div id="summary">
+                <p>Welcome to TravelWise, your ultimate travel companion! We're here to transform your travel dreams into reality, offering expert insights and personalized planning for unforgettable adventures. Explore the world seamlessly and stress-free, one wise journey at a time.</p>
+            </div>
+        </div>
+        <div id="results"></div>
+    </div>
+    <aside>
+            <ul>
+                <li><img class="icons" src="Images\twitter.svg" alt="Twitter-logo"></li>
+                <li><img class="icons" src="Images\facebook.svg" alt="FaceBook-logo"></li>
+                <li><img class="icons" src="Images\instagram.svg" alt="Instagram-logo"></li>
+                <li><img class="icons" src="Images\youtube.svg" alt="Youtube-logo"></li>
+            </ul>
+        </aside>
+        <script src="travel_recommendation.js"></script>
+</body>
+</html>
